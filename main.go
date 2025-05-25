@@ -98,6 +98,8 @@ func buildMainBox() {
 		mainBox.Destroy()
 	}
 	mainBox = gtk.NewBox(innerOrientation, 0)
+	mainBox.SetHExpand(true)
+	mainBox.SetHAlign(gtk.ALIGN_FILL)
 
 	if *alignment == "start" {
 		alignmentBox.PackStart(mainBox, false, true, 0)
